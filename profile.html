@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link 
+      rel="stylesheet" 
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+      <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" 
+      rel="stylesheet">
+
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
+      rel="stylesheet">
+        <link rel="stylesheet" href="/profile.css">
+        <link rel="icon" href="images/favicon.png">
+        <title>My Profile</title>
+    </head>
+<body>
+             <!--Header-->
+     <header>
+        <div class="media">
+          <div class="media-body">
+            <h1 id="headertext" class="mt-0">The Sauce Code</h1>
+          </div>
+        </div>
+         
+  
+         <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="nav nav-pills navbar-nav ml-auto">
+          <li><a id="navBar" class="nav-item nav-link" href="home.html">Home</a></li>
+          <li><a id="navBar" class="nav-item nav-link" href="#">Preferences</a></li>
+          <li><a id="navBar" class="nav-item nav-link" href="myKitchen.html">My Kitchen</a></li>
+          <li><a id="navBar" class="nav-item nav-link active" href="/profile.html">My Profile<span class="sr-only">(current)</span></a></li>
+          <li><a id="navBar" class="nav-item nav-link" href="recipes.html">Recipes</a></li>
+          </ul>
+         </div>
+    </nav>
+    </header>
+          
+        <div class="container main-secction">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+                    <img src="/public/assets/images/foodThreeUpdate.jpg" alt="favorite food">
+                </div>
+                <div class="row user-left-part">
+                    <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                        <div class="row ">
+                            <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
+                                <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" class="rounded-circle" alt="Profile Picture">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                                <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Contact Me</button> 
+                                <button class="btn btn-warning btn-block">Placeholder</button>                               
+                            </div>
+                            <div class="row user-detail-row">
+                                <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
+                                    <div class="border"></div>
+                                    <p>FOLLOWER</p>
+                                    <span>320</span>
+                                </div>                           
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12 pull-right profile-right-section">
+                        <div class="row profile-right-section-row">
+                            <div class="col-md-12 profile-header">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
+                                        <h1>Name</h1>
+                                        <h5>Tag Line </h5>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
+                                        <a href="/myKitchen.html" class="btn btn-primary btn-block">My Kitchen</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                    <li class="nav-item">
+                                                      <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i class="fas fa-user-circle"></i>User Profile</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                      <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i class="fas fa-info-circle"></i>More Information</a>
+                                                    </li>                                                
+                                                  </ul>
+                                                  
+                                                  <!-- Tab panes -->
+                                                  <div class="tab-content">
+                                                    <div role="tabpanel" class="tab-pane fade show active" id="profile">
+                                                            <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <label>ID</label>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p>509230671</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <label>Name</label>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p>Crystal Smith</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <label>Email</label>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p>csmith@gmail.com</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <label>Telephone</label>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p>12345678</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <label>Favorite Food</label>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p>Pasta</p>
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                                    <div role="tabpanel" class="tab-pane fade" id="buzz">
+                                                            <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <label>Cooking Level</label>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <p>Expert</p>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <label>Your Bio</label>
+                                                                        <br/>
+                                                                        <p>Your detail description</p>
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                                    
+                                                  </div>   
+                                    </div>
+                                    <div class="col-md-4 img-main-rightPart">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row image-right-part">
+                                                    <div class="col-md-6 pull-left image-right-detail">
+                                                        <h6>Favorite Food</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="/myKitchen.html">
+                                                <div class="col-md-12 image-right">
+                                                    <img src="/public/assets/images/foodOne.jpg">
+                                                </div>
+                                            </a>
+                                            <div class="col-md-12 image-right-detail-section2">
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contact">Let's Cook</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <p for="msj">Placeholder</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtFullname">Full Name</label>
+                            <input type="text" id="txtFullname" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtEmail">Email</label>
+                            <input type="text" id="txtEmail" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPhone">Phone Number</label>
+                            <input type="text" id="txtPhone" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="album py-5">
+            <div class="container">
+              <div class="row" id = "recipeContainer">
+              <!-- Recipe Cards  -->
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm border-light">
+                          <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image1">
+                               <div class="card-body text-center">
+                                  <h4 class="card-title" id="title1" id="ingred1"></h4>
+                                  <h6></h6>
+                                  <div class="card-text ingredients"></div>
+                                      <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn1">View Recipe</a></button>
+                                  </div>
+                           </div>   
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm border-light">
+                          <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image2">
+                               <div class="card-body text-center">
+                                  <h4 class="card-title" id="title2"></h4>
+                                  <h6></h6>
+                                  <div class="card-text ingredients" id="ingred2"></div>
+                                  <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn2">View Recipe</a></button>
+                                  </div>
+                           </div>   
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card mb-4 shadow-sm border-light">
+                          <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image3">
+                               <div class="card-body text-center">
+                                  <h4 class="card-title" id="title3"></h4>
+                                  <h6></h6>
+                                  <div class="card-text ingredients" id="ingred3"></div>
+                                  <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn3">View Recipe</a></button>
+                                  </div>
+                           </div>   
+                  </div>
+              </div>
+              <div class="row" id = "recipeContainer">
+                  <!-- Recipe Cards  -->
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm border-light">
+                              <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image4">
+                                   <div class="card-body text-center">
+                                      <h4 class="card-title"  id="title4"></h4>
+                                      <h6></h6>
+                                      <div class="card-text ingredients" id="ingred4"></div>
+                                      <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn4">View Recipe</a></button>
+                                      </div>
+                               </div>   
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm border-light">
+                              <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image5">
+                                   <div class="card-body text-center">
+                                      <h4 class="card-title" id="title5"></h4>
+                                      <h6></h6>
+                                      <div class="card-text ingredients" id="ingred5"></div>
+                                      <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn5">View Recipe</a></button>
+                                      </div>
+                               </div>   
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm border-light">
+                              <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image6">
+                                   <div class="card-body text-center">
+                                      <h4 class="card-title" id="title6"></h4>
+                                      <h6></h6>
+                                      <div class="card-text ingredients" id="ingred6"> </div>
+                                      <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn6">View Recipe</a></button>
+                                      </div>
+                               </div>   
+                      </div>
+                  </div>
+                  <div class="row" id = "recipeContainer">
+                      <!-- Recipe Cards  -->
+                          <div class="col-md-4">
+                              <div class="card mb-4 shadow-sm border-light">
+                                  <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image7">
+                                       <div class="card-body text-center">
+                                          <h4 class="card-title" id="title7"></h4>
+                                          <h6></h6>
+                                          <div class="card-text ingredients" id="ingred7"> </div>
+                                          <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn7">View Recipe</a></button>
+                                          </div>
+                                   </div>   
+                          </div>
+                          <div class="col-md-4">
+                              <div class="card mb-4 shadow-sm border-light">
+                                  <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image8">
+                                       <div class="card-body text-center">
+                                          <h4 class="card-title" id="title8"></h4>
+                                          <h6></h6>
+                                          <div class="card-text ingredients" id="ingred8"></div>
+                                          <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn8">View Recipe</a></button>
+                                          </div>
+                                   </div>   
+                          </div>
+                          <div class="col-md-4">
+                              <div class="card mb-4 shadow-sm border-light">
+                                  <img class="recipeImg" src="" width="100%" height="225" alt="food image" id="image9">
+                                       <div class="card-body text-center">
+                                          <h4 class="card-title" id="title9"></h4>
+                                          <h6></h6>
+                                          <div class="card-text ingredients" id="ingred9"></div>
+                                          <button type="button" class="btn btn-md btn-outline-secondary viewRecipeBtn"><a href="" id="btn9">View Recipe</a></button>
+                                          </div>
+                                   </div>   
+                          </div>
+                      </div>
+  
+            </div>
+          </div>
+           
+        
+      <!--</section>-->
+        
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+          <script src="https://kit.fontawesome.com/yourcode.js"></script>
+          <script type="text/javascript" src="js/myprofile.js"></script>
+
+
+
+</body>
+</html>
