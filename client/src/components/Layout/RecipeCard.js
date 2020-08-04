@@ -1,20 +1,25 @@
 import React from 'react';
+import Thumbnail from './Thumbnail';
 
-const RecipeCard = (props) => {
-  console.log(props);
+const RecipeCard = ({ thumbnail, title, ingredients, href }) => {
+  //console.log(props);
   return (
-    <div className='card'>
+    <div className='ui centered card'>
       <div class='image'>
-        <img alt='food image' src='/images/foodFive.jpg'></img>
+        <Thumbnail src={thumbnail || 'https://placehold.it/300x300'} />
       </div>
       <div className='content'>
-        <div className='header'>{props.title}</div>
+        <div className='header'>{title}</div>
 
-        <div className='description'>Recipe Ingredients</div>
+        <div className='description'>Ingredients: {ingredients}</div>
       </div>
       <div className='extra content'>
         <span className='right floated'>View Video</span>
-        <span>View Recipe</span>
+        <span>
+          <a rel='noreferrer noopener' target='_blank' href={href}>
+            View Recipe
+          </a>
+        </span>
       </div>
     </div>
   );
