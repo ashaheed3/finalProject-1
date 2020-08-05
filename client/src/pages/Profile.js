@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Favorites from './Favorites';
+import Favorites from '../components/Favorites';
 
 const Profile = () => {
   return (

@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './components/Layout/Navbar';
+import Navbar from './components/Navbar';
 import Profile from './pages/Profile';
-import Favorites from './pages/Favorites';
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Profile} />
-          <Route exact path='/favorites' component={Favorites} />
         </Switch>
       </Fragment>
     </Router>
