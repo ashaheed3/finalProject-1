@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Layout/Navbar';
-import Home from './pages/Home';
+import Profile from './pages/Profile';
 import Favorites from './pages/Favorites';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Fragment>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={Profile} />
           <Route exact path='/favorites' component={Favorites} />
         </Switch>
       </Fragment>

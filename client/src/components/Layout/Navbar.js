@@ -19,7 +19,7 @@ const Navbar = () => {
         <ul className='navbar-nav ml-auto'>
           <Link to='/'>
             <li>
-              Home <span class='sr-only'>(current)</span>
+              Home <span className='sr-only'>(current)</span>
             </li>
           </Link>
 

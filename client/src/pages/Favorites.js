@@ -1,28 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import RecipeCard from '../components/Layout/RecipeCard';
 import API from '../utils/API';
 
-/*function Favorites() {
+function Favorites() {
   const [faves, setFaves] = useState([]);
 
-   const getFaves = () => {
+  /*const getFaves = () => {
     API.getFavorites()
       .then((res) => setFaves(res.data))
       .catch((err) => console.log(err));
+  };*/
+  const getFaves = async () => {
+    const res = await API.getFavorites();
+    console.log(res);
+    setFaves(res);
   };
 
   useEffect(() => {
-    const getFaves = async () => {
-      try {
-        await API.getFavorites().then((res) => setFaves(res.data));
-      } catch (error) {
-        console.log(error);
-      }
-
-      await getFaves();
-    };
-  }, [faves]);
+    getFaves();
+  }, []);
 
   const renderedFaves = (faves) => {
     if (!faves.length) {
@@ -30,20 +27,28 @@ import API from '../utils/API';
     }
 
     return faves.map((fave) => (
-      <div className='container'>
-        <RecipeCard
-          key={fave.objectID}
-          title={fave.title}
-          href={fave.href}
-          ingredients={fave.ingredients}
-          thumbnail={fave.thumbnail}
-        />
-      </div>
+      <RecipeCard
+        key={fave.title}
+        title={fave.title}
+        href={fave.href}
+        ingredients={fave.ingredients}
+        thumbnail={fave.thumbnail}
+      />
     ));
   };
 
-  return <div>{renderedFaves(faves)}</div>;
-}*/
+  return (
+    <div
+      className='container'
+      style={{
+        maxWidth: '1000px',
+        backgroundColor: 'grey',
+      }}
+    >
+      <div class='ui link cards'>{renderedFaves(faves)}</div>
+    </div>
+  );
+}
 
 /*useEffect(() => {
   const getFaves = async () => {
@@ -104,7 +109,7 @@ import API from '../utils/API';
   }
 }*/
 
-const Favorites = () => {
+/*const Favorites = () => {
   return (
     <div className='container'>
       <div className='ui link cards'>
@@ -117,7 +122,7 @@ const Favorites = () => {
       </div>
     </div>
   );
-};
+};*/
 
 /*render() {
   return (

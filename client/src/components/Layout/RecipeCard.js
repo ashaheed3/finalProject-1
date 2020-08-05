@@ -11,7 +11,7 @@ const RecipeCard = ({ thumbnail, title, ingredients, href }) => {
       <div className='content'>
         <div className='header'>{title}</div>
 
-        <div className='description'>Ingredients: {ingredients}</div>
+        <div className='description'>Ingredients: {ingredients.toString()}</div>
       </div>
       <div className='extra content'>
         <span className='right floated'>View Video</span>
