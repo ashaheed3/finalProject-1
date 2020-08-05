@@ -42,7 +42,7 @@ function Favorites() {
       className='container'
       style={{
         maxWidth: '1000px',
-        backgroundColor: 'grey',
+        backgroundColor: '#9F6B99FF',
       }}
     >
       <div class='ui link cards'>{renderedFaves(faves)}</div>

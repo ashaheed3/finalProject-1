@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-light'>
+    <nav
+      className='navbar navbar-expand-lg navbar-light'
+      style={{ backgroundColor: '#301728FF', padding: '16px' }}
+    >
       <button
         className='navbar-toggler'
         type='button'
@@ -15,15 +18,15 @@ const Navbar = () => {
       >
         <span className='navbar-toggler-icon'></span>
       </button>
-      <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
+      <div className='collapse navbar-collapse'>
         <ul className='navbar-nav ml-auto'>
-          <Link to='/'>
+          <Link to='/' style={{ color: '#9F6B99FF' }}>
             <li>
-              Home <span className='sr-only'>(current)</span>
+              Profile <span className='sr-only'>(current)</span>
             </li>
           </Link>
 
-          <Link to='/favorites'>
+          <Link to='/favorites' style={{ color: '#9F6B99FF' }}>
             <li>Favorites</li>
           </Link>
         </ul>
