@@ -1,0 +1,316 @@
+/* Body */
+body {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+h3 {
+    color: #f3c623;
+}
+
+/* Header */
+#headertext {
+    font-family: 'Montez', cursive;
+    font-size: 64px;
+    color: #844685;
+    text-align: center;
+    padding-top: 10px;
+    padding-top: 10px;
+    display: block;
+}
+
+#logoHeader {
+    width: 74px;
+    height: 74px;
+    padding-top: 10px;
+    padding-top: 10px;
+    justify-content: left;
+  }
+
+  #sauceCode {
+    font-family: 'Montez', cursive;
+    color: #f3c623;
+    font-size: 50px;
+}
+
+/* Nav Bar */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #f3c623;
+    background-color: #844685;
+    border-radius: 0px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #faf4ff;
+}
+
+.navbar-light .navbar-nav .nav-lin {
+    color: #f3c623;
+    text-decoration: none;
+    background-color: transparent;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #f3c623;
+    font-size: large;
+}
+
+#navBar:hover {
+    color: #faf4ff;
+    text-decoration: none;
+    background-color: #844685;
+    border-radius: 0px;
+    font-size: large;
+    font-weight: lighter;
+}
+
+.navbar-light .navbar-toggler {
+    color: #844685;
+    border-color:#844685;
+    border-width: thick;
+}
+
+/* Body Picture */
+#kitchenPicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+   
+}
+
+/* Search Content */
+.jumbotron{
+    color: #f3c623;
+    background-color: #844685;
+    font-weight: lighter;
+    text-align: center;
+    border-radius: 0px;
+}
+
+.btn-outline-success {
+    color: #f3c623;
+    border-color: #f3c623;
+}
+
+.btn:hover {
+    color: #faf4ff;
+    background-color: #f3c623;
+    border-color:#844685;
+}
+
+
+.card {
+    background-color:transparent;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+    margin: 2%;
+    margin-top: 80px;
+    padding: 20px;
+    width: 46%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+  
+  }
+  .card-two {
+    background-color: #fff;
+    background-image: url("/public/assets/images/foodThree.jpg");
+    background-size: 1850px;
+    background-position: bottom;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+      color: whitesmoke;
+      font-weight: bolder;
+      font-size: larger;
+    margin: 2%;
+    margin-top: 80px;
+    padding: 20px;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    width: 46%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+  }
+
+  ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    background-color:white;
+    color: #844685;
+    padding: 10px;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+
+input {
+  height: 50px;
+  width: 100%;
+  padding: 6px;
+  margin-top: 10px;
+  font-size: 2.4em;
+  border: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: white;
+}
+#dairyItems>li {
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #844685;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+#produceItems>li {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #844685;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+
+  #meatItems>li {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #844685;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+
+  #seafoodItems>li {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #844685;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+
+  #pantryItems>li {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #844685;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+li:before {
+  content: "\200B";
+  position: absolute;
+}
+li::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+li button {
+  float: right;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  background-color: #844685;
+  color: white;
+  font-size: 1em;
+}
+li button:hover {
+  background-color: #844685;
+}
+
+.btn-secondary:active {
+    color: #fff;
+    background-color: #f3c623;
+    border-color: #f3c623;
+}
+
+.todos {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.recipesBtn{
+    color:white ;
+    background-color: transparent;
+    float: right;
+
+}
+.recipesBtn a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #844685;
+     font-weight: bolder;
+}
+
+
+.btn {
+    color: white;
+    background-color: transparent;
+
+}
+
+.btn:hover {
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.meal {
+    text-align: center;
+    color: black;
+   
+    
+}
+
+div.background {
+    
+    border: 2px solid black;
+  }
+  
+  div.transbox {
+    margin: 200px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+  }
+  
+  div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+  }
+
+
+
+   
