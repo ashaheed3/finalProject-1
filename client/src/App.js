@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Profile from './pages/Profile';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Fragment>
         <Navbar />
         <Switch>
-          <Route exact path='/' component={Profile} />
+          <Route exact path='/' component={ProfilePage} />
         </Switch>
       </Fragment>
     </Router>

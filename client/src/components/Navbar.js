@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+//import Navbar from 'react-bootstrap/Navbar';
 
 const Navbar = () => {
   return (
@@ -26,8 +27,8 @@ const Navbar = () => {
             </li>
           </Link>
 
-          <Link to='/favorites' style={{ color: '#9F6B99FF' }}>
-            <li>Favorites</li>
+          <Link to='/test' style={{ color: '#9F6B99FF' }}>
+            <li>Test</li>
           </Link>
         </ul>
       </div>

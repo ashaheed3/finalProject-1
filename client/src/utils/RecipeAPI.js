@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 export default {
-  getFavorites: function () {
+  getRecipes: function () {
     return axios
-      .get('/api/favorites')
+      .get('/api/testRecipes')
       .then((response) => {
         console.log(response.data);
         return response.data;
@@ -13,9 +13,9 @@ export default {
       });
   },
 
-  getUser: function (query) {
+  postRecipes: function () {
     return axios
-      .get('/api/user', { params: { q: query } })
+      .post('/api/favorites', {})
       .then((response) => {
         console.log(response.data);
         return response.data;

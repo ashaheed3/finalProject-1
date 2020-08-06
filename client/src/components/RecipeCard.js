@@ -1,12 +1,12 @@
 import React from 'react';
 import Thumbnail from './Thumbnail';
 
-const RecipeCard = ({ thumbnail, title, ingredients, href }) => {
+const RecipeCard = ({ image, title, ingredients, sourceUrl }) => {
   //console.log(props);
   return (
     <div className='ui centered card' style={{ backgroundColor: '#301728FF' }}>
       <div class='image'>
-        <Thumbnail src={thumbnail || 'https://placehold.it/300x300'} />
+        <Thumbnail src={image || 'https://placehold.it/300x300'} />
       </div>
       <div className='content'>
         <div className='header' style={{ color: '#9F6B99FF' }}>
@@ -18,9 +18,13 @@ const RecipeCard = ({ thumbnail, title, ingredients, href }) => {
         </div>
       </div>
       <div className='extra content'>
-        <span className='right floated'>View Video</span>
+        <span className='right floated'>
+          <a rel='noreferrer noopener' target='_blank' href={sourceUrl}>
+            View Video
+          </a>
+        </span>
         <span>
-          <a rel='noreferrer noopener' target='_blank' href={href}>
+          <a rel='noreferrer noopener' target='_blank' href={sourceUrl}>
             View Recipe
           </a>
         </span>

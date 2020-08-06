@@ -24,9 +24,9 @@ function Favorites() {
       <RecipeCard
         key={fave.title}
         title={fave.title}
-        href={fave.href}
+        sourceUrl={fave.sourceUrl}
         ingredients={fave.ingredients}
-        thumbnail={fave.thumbnail}
+        image={fave.image}
       />
     ));
   };
@@ -39,6 +39,7 @@ function Favorites() {
         backgroundColor: '#9F6B99FF',
       }}
     >
+      <h2 style={{ textAlign: 'center' }}>My Favorite Recipes</h2>
       <div class='ui link cards'>{renderedFaves(faves)}</div>
     </div>
   );
