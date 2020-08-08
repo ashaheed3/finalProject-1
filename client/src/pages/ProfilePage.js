@@ -1,14 +1,15 @@
 import React from 'react';
-
+import '../components/styleSheet.css';
 import Favorites from '../components/Favorites';
-import Profile from '../components/Profile';
+//import Profile from '../components/Profile';
+import ProfileTwo from '../components/ProfileTwo';
 
 const ProfilePage = () => {
   return (
-    <div>
-      <Profile />
+    <section className='profilebody'>
+      <ProfileTwo />
       <Favorites />
-    </div>
+    </section>
   );
 };
 

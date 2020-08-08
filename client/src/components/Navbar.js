@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import Navbar from 'react-bootstrap/Navbar';
 
 const Navbar = () => {
   return (
-    <nav
-      className='navbar navbar-expand-lg navbar-light'
-      style={{ backgroundColor: '#301728FF', padding: '16px' }}
-    >
+    <nav className='navbar navbar-expand-lg navbar-light'>
       <button
         className='navbar-toggler'
         type='button'
@@ -19,17 +15,37 @@ const Navbar = () => {
       >
         <span className='navbar-toggler-icon'></span>
       </button>
-      <div className='collapse navbar-collapse'>
-        <ul className='navbar-nav ml-auto'>
-          <Link to='/' style={{ color: '#9F6B99FF' }}>
-            <li>
-              Profile <span className='sr-only'>(current)</span>
-            </li>
-          </Link>
-
-          <Link to='/test' style={{ color: '#9F6B99FF' }}>
-            <li>Test</li>
-          </Link>
+      <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
+        <ul className='nav nav-pills navbar-nav ml-auto'>
+          <li>
+            <a id='navBar' className='nav-item nav-link' href='home.html'>
+              Home
+            </a>
+          </li>
+          <li>
+            <a id='navBar' className='nav-item nav-link' href='#'>
+              Preferences
+            </a>
+          </li>
+          <li>
+            <a id='navBar' className='nav-item nav-link' href='myKitchen.html'>
+              My Kitchen
+            </a>
+          </li>
+          <li>
+            <a
+              id='navBar'
+              className='nav-item nav-link active'
+              href='/profile.html'
+            >
+              My Profile<span className='sr-only'>(current)</span>
+            </a>
+          </li>
+          <li>
+            <a id='navBar' className='nav-item nav-link' href='recipes.html'>
+              Recipes
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

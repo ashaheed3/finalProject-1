@@ -4,16 +4,16 @@ import Thumbnail from './Thumbnail';
 const RecipeCard = ({ image, title, ingredients, sourceUrl }) => {
   //console.log(props);
   return (
-    <div className='ui centered card' style={{ backgroundColor: '#301728FF' }}>
+    <div className='ui centered card' style={{ backgroundColor: '#844685' }}>
       <div class='image'>
         <Thumbnail src={image || 'https://placehold.it/300x300'} />
       </div>
       <div className='content'>
-        <div className='header' style={{ color: '#9F6B99FF' }}>
+        <div className='header' style={{ color: 'white' }}>
           {title}
         </div>
 
-        <div className='description' style={{ color: '#9F6B99FF' }}>
+        <div className='description' style={{ color: 'white' }}>
           Ingredients: {ingredients.toString()}
         </div>
       </div>

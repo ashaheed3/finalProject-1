@@ -35,8 +35,8 @@ function Favorites() {
     <div
       className='container'
       style={{
-        maxWidth: '1000px',
-        backgroundColor: '#9F6B99FF',
+        maxWidth: '1100px',
+        marginTop: '20px',
       }}
     >
       <h2 style={{ textAlign: 'center' }}>My Favorite Recipes</h2>
