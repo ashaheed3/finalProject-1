@@ -1,18 +1,25 @@
 import axios from "axios";
 
+const config = {
+  headers: {
+      'Content-Type': 'application/json',
+      'x-auth-token': localStorage.getItem('token')
+  }
+}
+
 export default {
   // Save recipe to my favorites
   saveFavorites: function(data) {
-    return axios.get("/api/favorites/myfavorites", data);
+    return axios.post("/api/favorites/myfavorites", data, config);
   },
   // Delete recipe from myfavorites by recipe id
   deleteFavorites: function(id) {
-    return axios.delete("/api/favorites/myfavorites/" + id);
+    return axios.delete("/api/favorites/myfavorites/" + id, config);
   },
 
   //Retrieve user's favorites
   getUserFavorites: function(){
-    return axios.post("/api/favories/myfavorites")
+    return axios.get("/api/favories/myfavorites", config)
   },
 
   getFavorites: function () {

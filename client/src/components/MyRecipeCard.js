@@ -32,9 +32,9 @@ class MyRecipeCard extends Component{
         .then(res => this.setState({ youtubeVideo: res.data.items[0] }))
         .catch(err => console.log(err));
 
-        API.getUserFavorites()
-        .then(res => this.setState({savedRecipes: res}))
-        .catch(err => console.log(err))
+        // API.getUserFavorites()
+        // .then(res => this.setState({savedRecipes: res}))
+        // .catch(err => console.log(err))
       }
 
       toggleLike = () => {
@@ -118,7 +118,7 @@ class MyRecipeCard extends Component{
                             <h6>Ingredients</h6>
                         {this.renderIngredients()}
                         </div>
-                        {/* <Loading text = "Loading ingredients"/> */}
+                        
                         <div className="d-flex justify-content-between align-items-center">
                             <button type="button" className="btn btn-md btn-outline-secondary viewRecipeBtn">
                                 <a href = {this.props.href}>View Recipe</a>    
