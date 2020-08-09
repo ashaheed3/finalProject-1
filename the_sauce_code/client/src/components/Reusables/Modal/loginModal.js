@@ -28,7 +28,7 @@ function Login() {
             <Modal.Title>Modal title</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            I will not close if you click outside me. 
+            The Sauce Code Login
              <Form>
                                               <Form.Group as={Row} controlId="formHorizontalEmail">
                                                   <Form.Label column sm={2}>
@@ -54,7 +54,7 @@ function Login() {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary">Sign Up</Button>
+            <Button type="submit" variant="primary">Sign Up</Button>
           </Modal.Footer>
         </Modal>
        

@@ -13,6 +13,33 @@ function SignUp() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const initialFormData = Object.freeze({
+    firsName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    mealPreferences: ""
+
+  });
+
+  const Form = () => {
+    const [formData, updateFormData] = React.useState(initialFormData);
+  
+    const handleChange = (e) => {
+      updateFormData({
+        ...formData,
+  
+        // Trimming any whitespace
+        [e.target.name]: e.target.value.trim()
+      });
+    };
+  
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      console.log(formData);
+      // ... submit to API 
+    };
+
   return (
     <div>
       <Button variant="primary" onClick={handleShow}>
@@ -30,15 +57,17 @@ function SignUp() {
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
+          The Sauce Code Sign Up 
            <Form>
                                             <Form.Group as={Row} controlId="formHorizontalEmail">
                                                 <Form.Label column sm={2}>
                                                 First Name
                                                 </Form.Label>
                                                 <Col sm={10}>
-                                                <Form.Control type="email" placeholder="Email" />
+                                                <Form.Control
+                                                name="firstName" 
+                                                onChange={handleChange}
+                                                 placeholder="First Name" />
                                                 </Col>
                                             </Form.Group>
 
@@ -47,7 +76,9 @@ function SignUp() {
                                                 Last Name
                                                 </Form.Label>
                                                 <Col sm={10}>
-                                                <Form.Control type="password" placeholder="Password" />
+                                                <Form.Control 
+                                                name="lastName"
+                                                onChange={handleChange} placeholder="Last Name" />
                                                 </Col>
                                             </Form.Group>
 
@@ -56,7 +87,9 @@ function SignUp() {
                                                 Email
                                                 </Form.Label>
                                                 <Col sm={10}>
-                                                <Form.Control type="email" placeholder="Email" />
+                                                <Form.Control 
+                                                name="email"
+                                                onChange={handleChange}type="email" placeholder="Email" />
                                                 </Col>
                                             </Form.Group>
 
@@ -65,13 +98,17 @@ function SignUp() {
                                                 Password
                                                 </Form.Label>
                                                 <Col sm={10}>
-                                                <Form.Control type="password" placeholder="Password" />
+                                                <Form.Control 
+                                                name="password"
+                                                onChange={handleChange}type="password" placeholder="Password" />
                                                 </Col>
                                             </Form.Group>
 
                                             <Form.Group controlId="exampleForm.ControlSelect2">
                                                 <Form.Label>Meal Preferences</Form.Label>
-                                                <Form.Control as="select" multiple>
+                                                <Form.Control as="select" multiple
+                                                name="mealPreferences"
+                                                onChange={handleChange}>
                                                 <option>Gluten Free</option>
                                                 <option>Keto</option>
                                                 <option>Lacoto-Vegan</option>
@@ -90,7 +127,7 @@ function SignUp() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary">Sign Up</Button>
+          <Button type="submit" onChange={handleSubmit} variant="primary">Sign Up</Button>
         </Modal.Footer>
       </Modal>
      
