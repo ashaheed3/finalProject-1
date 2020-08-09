@@ -16,7 +16,8 @@ function SignUp() {
   const initialFormData = Object.freeze({
     firsName: "",
     lastName: "",
-    email: "",
+    username: "",
+    emailAddress: "",
     password: "",
     mealPreferences: ""
 
@@ -82,13 +83,25 @@ function SignUp() {
                                                 </Col>
                                             </Form.Group>
 
+                                            <Form.Group as={Row} controlId="formHorizontalPassword">
+                                                <Form.Label column sm={2}>
+                                                Username
+                                                </Form.Label>
+                                                <Col sm={10}>
+                                                <Form.Control 
+                                                name="username"
+                                                onChange={handleChange} placeholder="username" />
+                                                </Col>
+                                            </Form.Group>
+
+
                                             <Form.Group as={Row} controlId="formHorizontalEmail">
                                                 <Form.Label column sm={2}>
                                                 Email
                                                 </Form.Label>
                                                 <Col sm={10}>
                                                 <Form.Control 
-                                                name="email"
+                                                name="emailAddress"
                                                 onChange={handleChange}type="email" placeholder="Email" />
                                                 </Col>
                                             </Form.Group>
