@@ -1,10 +1,22 @@
 import React from "./react";
-import Header from './header.js'
+import signUpModal from "./modal/signUp"
+
+
 
 
 export default class Header extends React.Component {
     render () {
-        return 
-        <Header/>
+        return (
+       <div className="App">
+      <header>
+        <h1>The Sauce Code</h1>
+            <p class="lead" id="runner">You Got the Sauce Now</p>    
+      </header>
+      <signUpModal/>
+      </div>
+      
+
+      )
     }
 }
+
