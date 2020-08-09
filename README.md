@@ -1,7 +1,7 @@
 # The Sauce Code: MERN Stack Reloaded
 ---
 ## Team Digital Designs
-![teamDigtialDesigns](client\src\components\Reusables\Images\teamDigitalDesign.png)<br/>
+![teamDigtialDesigns](the_sauce_code/client/src/components/Reusables/Images/teamDigitalDesign.png)<br/>
 
 * Connect with [Ayanna](https://github.com/ashaheed3) if you are seeking a strong frontend/backend dev.
 * Connect with [Aja](https://github.com/clemsontigress) if you are seeking  a strong frontend/backend dev with strong project management skills.
