@@ -21,11 +21,14 @@ connectDB();
 //app.use('/api', apiRoutes);
 //app.use(routes);
 app.use(require('./routes/apiRoutes.js'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/favorites', require('./routes/api/favorites'));
 
 // Send every request to the React app
 // Define any API routes before this runs
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
+  res.sendFile(path.join(__dirname, './client/public/index.html'));
 });
 
 app.listen(PORT, function () {
