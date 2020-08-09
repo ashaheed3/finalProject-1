@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const FavoritesSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
   },
 
   id: {
@@ -15,7 +16,6 @@ const FavoritesSchema = new mongoose.Schema({
 
   sourceUrl: {
     type: String,
-    default: '',
   },
 
   videoID: {
@@ -24,7 +24,6 @@ const FavoritesSchema = new mongoose.Schema({
 
   image: {
     type: String,
-    default: '',
   },
 
   ingredients: [

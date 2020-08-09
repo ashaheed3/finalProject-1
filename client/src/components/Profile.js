@@ -22,7 +22,7 @@ const Profile = () => {
         <div style={{ margin: '10px' }}>
           <img
             style={{ width: '160px', height: '160px', borderRadius: '80px' }}
-            src='https://images.unsplash.com/photo-1564923630403-2284b87c0041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
+            src='https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png'
           />
           <h2>Hi, First Name!</h2>
         </div>

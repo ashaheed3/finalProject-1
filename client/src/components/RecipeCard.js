@@ -1,7 +1,7 @@
 import React from 'react';
 import Thumbnail from './Thumbnail';
 
-const RecipeCard = ({ image, title, ingredients, sourceUrl }) => {
+const RecipeCard = ({ image, title, ingredients, sourceUrl, videoID }) => {
   //console.log(props);
   return (
     <div className='ui centered card' style={{ backgroundColor: '#844685' }}>
@@ -19,7 +19,7 @@ const RecipeCard = ({ image, title, ingredients, sourceUrl }) => {
       </div>
       <div className='extra content'>
         <span className='right floated'>
-          <a rel='noreferrer noopener' target='_blank' href={sourceUrl}>
+          <a rel='noreferrer noopener' target='_blank' href={videoID}>
             View Video
           </a>
         </span>

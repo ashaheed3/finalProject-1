@@ -20,12 +20,20 @@ function Favorites() {
       return <h1 className='text-center'>You haven't saved any recipes</h1>;
     }
 
+    let ingredientsArray = [];
+    let ingredients = faves[0].ingredients;
+
+    ingredients.forEach((ingredient) => {
+      ingredientsArray.push(ingredient.name);
+    });
+
     return faves.map((fave) => (
       <RecipeCard
         key={fave.title}
         title={fave.title}
         sourceUrl={fave.sourceUrl}
-        ingredients={fave.ingredients}
+        videoID={fave.videoID}
+        ingredients={ingredientsArray}
         image={fave.image}
       />
     ));

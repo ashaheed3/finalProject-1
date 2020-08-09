@@ -17,35 +17,19 @@ const Navbar = () => {
       </button>
       <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
         <ul className='nav nav-pills navbar-nav ml-auto'>
-          <li>
-            <a id='navBar' className='nav-item nav-link' href='home.html'>
-              Home
-            </a>
-          </li>
-          <li>
-            <a id='navBar' className='nav-item nav-link' href='#'>
-              Preferences
-            </a>
-          </li>
-          <li>
-            <a id='navBar' className='nav-item nav-link' href='myKitchen.html'>
-              My Kitchen
-            </a>
-          </li>
-          <li>
-            <a
-              id='navBar'
-              className='nav-item nav-link active'
-              href='/profile.html'
-            >
-              My Profile<span className='sr-only'>(current)</span>
-            </a>
-          </li>
-          <li>
-            <a id='navBar' className='nav-item nav-link' href='recipes.html'>
-              Recipes
-            </a>
-          </li>
+          <Link to='/' className='nav-item nav-link'>
+            <li>Home</li>
+          </Link>
+          <Link to='/mykitchen' className='nav-item nav-link'>
+            <li>My Kitchen</li>
+          </Link>
+          <Link to='/preferences' className='nav-item nav-link'>
+            <li>Preferences</li>
+          </Link>
+
+          <Link to='/recipes' className='nav-item nav-link'>
+            <li>Recipes</li>
+          </Link>
         </ul>
       </div>
     </nav>

@@ -7,7 +7,7 @@
 
 /* Body */
 .profilebody {
-  background-image: url(/images/backgroundPic.png);
+  background-image: url(/images/bkgdPicMoreTransparent.png);
   min-width: 100%;
   min-height: 100%;
   background-size: cover;
@@ -34,6 +34,7 @@ header.jumbotron {
   padding-top: 10px;
   padding-top: 10px;
   display: block;
+  font-weight: lighter;
 }
 
 #logoHeader {
@@ -113,14 +114,16 @@ body {
   margin-top: -50px;
 }
 .user-left-part {
-  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
 }
 .user-image img {
   width: 100px;
   height: 100px;
 }
 .user-profil-part {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   background-color: #fafafa;
 }
 .follow {

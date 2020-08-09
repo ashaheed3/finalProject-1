@@ -12,6 +12,7 @@ mongoose.connect(mongodb, {
 
 const favoriteSeed = [
   {
+    user: '5f2f08c9faa0321d34b61e8a',
     id: '1',
     videoID: '1',
     image: 'http://img.recipepuppy.com/360322.jpg',
@@ -28,6 +29,7 @@ const favoriteSeed = [
     title: 'Deviled Beef Hamburger Patties ',
   },
   {
+    user: '5f2f08c9faa0321d34b61e8b',
     id: '2',
     videoID: '2',
     image: 'http://img.recipepuppy.com/16323.jpg',
@@ -107,22 +109,34 @@ const favoriteSeed = [
 
 const userSeed = [
   {
-    name: 'Aja Reeves',
+    firstName: 'Aja',
+    lastName: 'Reeves',
+    emailAddress: 'areeves@gmail.com',
     username: 'areeves',
-    password: '12345',
-    date: 8 - 4 - 20,
+    password: '123345',
+    avatar: 'avatar',
+    preferences: ['pescatarian', 'gluten-free'],
+    date: '',
   },
   {
-    name: 'Ayanna Shaheed',
+    firstName: 'Ayanna',
+    lastName: 'Shaheed',
+    emailAddress: 'ashaheed@gmail.com',
     username: 'ashaheed',
-    password: '678910',
-    date: 8 - 5 - 20,
+    password: '673310',
+    avatar: 'avatar',
+    preferences: [],
+    date: '',
   },
   {
-    name: 'Danielle Beaty',
+    firstName: 'Danielle',
+    lastName: 'Beaty',
+    emailAddress: 'dbeaty@gmail.com',
     username: 'dbeaty',
-    password: '246810',
-    date: 8 - 4 - 20,
+    password: '674510',
+    avatar: 'avatar',
+    preferences: ['pescatarian', 'vegetarian'],
+    date: '',
   },
 ];
 
@@ -137,7 +151,7 @@ db.Favorites.remove({})
     process.exit(1);
   });
 
-db.User.remove({})
+/*db.User.remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then((data) => {
     console.log(data.result.n + ' records inserted in User!');
@@ -146,4 +160,4 @@ db.User.remove({})
   .catch((err) => {
     console.error(err);
     process.exit(1);
-  });
+  });*/
