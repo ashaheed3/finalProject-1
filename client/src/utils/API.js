@@ -10,7 +10,7 @@ const config = {
 export default {
   // Save recipe to my favorites
   saveFavorites: function(data) {
-    return axios.post("/api/favorites/myfavorites", data, config);
+    return axios.post("/api/favorites/myfavorites", JSON.stringify(data), config);
   },
   // Delete recipe from myfavorites by recipe id
   deleteFavorites: function(id) {
@@ -19,7 +19,11 @@ export default {
 
   //Retrieve user's favorites
   getUserFavorites: function(){
-    return axios.get("/api/favories/myfavorites", config)
+    return axios.get("/api/favorites/myfavorites", config)
+  },
+
+  createUser: function(data){
+    return axios.get("/api/auth", JSON.stringify(data), config)
   },
 
   getFavorites: function () {

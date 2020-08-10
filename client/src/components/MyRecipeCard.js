@@ -40,18 +40,18 @@ class MyRecipeCard extends Component{
       toggleLike = () => {
         this.setState(state => ({ saved: !state.saved }))
         switch (this.state.saved){
-        case true:
+        case false:
           API.saveFavorites({
             id: this.props.id,
             title: this.props.title,
             sourceUrl: this.props.href,
-            videoID: this.state.youtubeVideo.id.videoId,
+            videoID: this.state.youtubeVideo ? this.state.youtubeVideo.id.videoId : "novid",
             image: this.state.thumbnail,
             ingredients: this.state.ingredientResults
           })
         
           break;
-        case false:
+        case true:
           API.deleteFavorites(this.props.id)
           break;
       }

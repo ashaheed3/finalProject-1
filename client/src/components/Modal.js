@@ -17,7 +17,7 @@ const Modal = (props) => {
                                             <iframe 
                                                 width="460" 
                                                 height="258" 
-                                                src={"https://www.youtube.com/embed/" + props.videoId} 
+                                                src={`https://www.youtube.com/embed/"${props.videoId}`} 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                                                 allowfullscreen>

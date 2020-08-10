@@ -1,3 +1,4 @@
+import React from "react";
 import Modal from 'react-bootstrap/Modal';
 import { Button} from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
@@ -5,12 +6,21 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import {useState} from 'react';
 
-function Login() {
+import { Link, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../../../actions/auth';
+
+function Login({ login, isAuthenticated}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   
+  if (isAuthenticated) {
+    return <Redirect to="/myprofile" />;
+  }
+
     return (
       <div>
          <Button variant="primary" onClick={handleShow}>
@@ -25,11 +35,10 @@ function Login() {
       >
 
           <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
+            <Modal.Title></Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            I will not close if you click outside me. Don't even try to press
-            escape key.
+          <h3>You've The Sauce Now</h3> 
              <Form>
                                               <Form.Group as={Row} controlId="formHorizontalEmail">
                                                   <Form.Label column sm={2}>
@@ -55,7 +64,7 @@ function Login() {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary">Sign Up</Button>
+            <Button id='btnModal' variant="primary">Sign Up</Button>
           </Modal.Footer>
         </Modal>
        
@@ -64,4 +73,13 @@ function Login() {
     );
   }
   
-  render(<Login />);
+  Login.propTypes = {
+    login: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool
+  };
+  
+  const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+  });
+  
+  export default connect(mapStateToProps, { login })(Login);

@@ -5,7 +5,7 @@ import React from 'react';
 function SearchBar(props){
 
         return (
-            <div className="row justify-content-center search">
+            <div style = {{"padding":"25px"}}className="row justify-content-center search">
 
               
                <form className="form-inline">

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from '../components/SearchBar';
 import MyRecipeCard from '../components/MyRecipeCard';
 import RecipeListAPI from '../utils/RecipeListAPI';
-
+import '../components/styleSheet.css';
 
 
 
@@ -37,7 +37,7 @@ class Recipes extends Component {
 
       renderPage = () => {
         if (!this.state.results.length) {
-          return <h3>Search for some recipes to start cooking!</h3>;
+          return <h3 id = "headertext">Search for some recipes to start cooking!</h3>;
         } else {
           // return <div>Conditional render works!!!!</div>
           return this.state.results.map(recipe => {
@@ -58,10 +58,12 @@ class Recipes extends Component {
     
       render() {
         return (
-          <div className="album py-5" style={{backgroundColor: "#fad09f"}}>
+          <div className="album py-5 profilebody" >
             <div className="container">
-            
+        
+        
                   <SearchBar
+                    
                     search={this.state.search}
                     handleFormSubmit={this.handleFormSubmit}
                     handleInputChange={this.handleInputChange}

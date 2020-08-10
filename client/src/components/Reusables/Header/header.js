@@ -1,6 +1,6 @@
-import React from "./react";
-import signUpModal from "./modal/signUp";
-import loginModal from "./modal/login";
+import React from "react";
+import SignUp from "../Modal/signUpModal"
+import loginModal from "../Modal/loginModal";
 
 
 
@@ -13,7 +13,7 @@ export default class Header extends React.Component {
         <h1>The Sauce Code</h1>
             <p class="lead" id="runner">You Got the Sauce Now</p>    
       </header>
-      <signUpModal/>
+      <SignUp/>
       </div>
       
 
