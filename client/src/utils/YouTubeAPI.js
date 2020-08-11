@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const BASEURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=relevance&q=";
-const APIKEY = "&key=AIzaSyCOMjWd6CEKlKs3byf7mEcSLCBez3aG3So";
+const APIKEY = "&key=AIzaSyAquhpduWBRmX2vAxfweLolkcnqOW345KY";
 
 // Export an object with a "search" method that searches the Giphy API for the passed query
 export default {

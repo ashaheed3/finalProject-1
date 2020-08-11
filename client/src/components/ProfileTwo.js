@@ -67,9 +67,9 @@ const ProfileTwo = ({
               <h3 style={{ fontFamily: 'Arial', fontSize: '20px' }}>
                 Email: {emailAddress}
               </h3>
-              <h3 style={{ fontFamily: 'Arial', fontSize: '20px' }}>
+              {/* <h3 style={{ fontFamily: 'Arial', fontSize: '20px' }}>
                 Preferences: {preferences}
-              </h3>
+              </h3> */}
             </section>
           </div>
         </div>
