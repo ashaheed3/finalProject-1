@@ -16,7 +16,10 @@ const ProfileTwo = ({
           <img src='/images/foodThreeUpdate.jpg' alt='favorite food' />
         </div>
 
-        <div className='col-md-12 col-sm-12 col-xs-12 user-profil-part'>
+        <div
+          className='col-md-12 col-sm-12 col-xs-12 user-profil-part'
+          style={{ paddingBottom: '80px' }}
+        >
           <div className='row'>
             <div className='col-md-4 col-md-4-sm-12 col-xs-12 user-image text-center'>
               <div style={{ margin: '0px' }}>
@@ -29,12 +32,13 @@ const ProfileTwo = ({
                   src='https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png'
                   alt='avatar'
                 />
-                <div>
-                  <h2>Hi, {firstName}!</h2>
-                  <h3>username: {username}</h3>
-                  <h3>Member Since: {date}</h3>
-                  <h3>Email:{emailAddress}</h3>
-                  <h3>Preferences: {preferences}</h3>
+
+                <h2>Hi, {firstName}!</h2>
+                <div className='users-info'>
+                  <h4> {username}</h4>
+                  <h4>Member Since: {date}</h4>
+                  <h4>Email:{emailAddress}</h4>
+                  <h4>Preferences: {preferences}</h4>
                 </div>
               </div>
             </div>

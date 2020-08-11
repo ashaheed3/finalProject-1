@@ -17,7 +17,11 @@ function Favorites() {
 
   const renderedFaves = (faves) => {
     if (!faves.length) {
-      return <h1 className='text-center'>You haven't saved any recipes</h1>;
+      return (
+        <h2 className='text-center'>
+          You haven't saved any recipes.<i class='frown outline icon'></i>
+        </h2>
+      );
     }
 
     /*let ingredientsArray = [];
