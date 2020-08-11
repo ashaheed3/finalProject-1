@@ -4,7 +4,11 @@ import axios from 'axios';
 import Card from '../../Card/recipeCard';
 import API from '../../../sharedComponets/sharedAPI'
 
-
+const styleMe ={ 
+    backgroundColor: "#844685",
+    fontSize: "24px",
+    color: 'white',
+}
 
 
 export default class GlutenButton extends React.Component {
@@ -38,7 +42,7 @@ export default class GlutenButton extends React.Component {
                 href="Card"
                 onClick={this.Card}>
 
-                <Button onClick={this.getGluten} variant="primary" size="lg" active>
+                <Button onClick={this.getGluten} variant="primary" size="lg" active style={styleMe}>
                     Gluten
   </Button>{' '}
             </div>
