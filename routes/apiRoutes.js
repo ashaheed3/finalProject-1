@@ -25,7 +25,7 @@ router.get('/api/favorites', (req, res) => {
 //how to search for one user?? this is just a test without auth token
 router.get('/api/user/test', (req, res) => {
   user
-    .findOne({ firstName: 'Ayanna' })
+    .findOne({ firstName: 'Danielle' })
     .then((dbuser) => {
       res.json(dbuser);
     })

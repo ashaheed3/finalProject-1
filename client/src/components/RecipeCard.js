@@ -17,7 +17,7 @@ const RecipeCard = ({ image, title, ingredients, sourceUrl, videoID }) => {
           Ingredients:
           {ingredients.map((ingredient) => {
             return (
-              <ul>
+              <ul style={{ listStyleType: 'none', padding: '0', margin: '0' }}>
                 <li>{ingredient.name}</li>
               </ul>
             );

@@ -34,7 +34,7 @@ const ProfileTwo = ({
                   <h3>username: {username}</h3>
                   <h3>Member Since: {date}</h3>
                   <h3>Email:{emailAddress}</h3>
-                  <h3>Preferences: {preferences}</h3>
+                  <h3>Preferences: {preferences.toString()}</h3>
                 </div>
               </div>
             </div>
