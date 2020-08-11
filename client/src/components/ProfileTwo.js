@@ -37,8 +37,8 @@ const ProfileTwo = ({
                 <div className='users-info'>
                   <h4> {username}</h4>
                   <h4>Member Since: {date}</h4>
-                  <h4>Email:{emailAddress}</h4>
-                  <h4>Preferences: {preferences}</h4>
+                  <h4>Email: {emailAddress}</h4>
+                  <h4>Preferences: {preferences.toString()}</h4>
                 </div>
               </div>
             </div>

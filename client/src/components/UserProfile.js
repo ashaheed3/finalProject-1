@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import API from '../utils/API';
 import ProfileTwo from './ProfileTwo';
+import moment from 'moment';
 
 function UserProfile() {
   const [UserInfo, setUserInfo] = useState({
@@ -38,7 +39,7 @@ function UserProfile() {
         username={UserInfo.username}
         emailAddress={UserInfo.emailAddress}
         avatar={UserInfo.avatar} //what if no avi?
-        date={UserInfo.date}
+        date={moment(UserInfo.date).format('LL')}
         preferences={UserInfo.preferences}
       />
     );

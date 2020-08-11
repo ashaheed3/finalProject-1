@@ -24,12 +24,6 @@ function Favorites() {
       );
     }
 
-    /*let ingredientsArray = [];
-    let ingredients = faves[0].ingredients;
-    ingredients.forEach((ingredient) => {
-      ingredientsArray.push(ingredient.name);
-    });*/
-
     return faves.map((fave) => (
       <RecipeCard
         key={fave.title}
