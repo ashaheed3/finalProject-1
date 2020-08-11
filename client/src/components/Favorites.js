@@ -8,7 +8,7 @@ function Favorites() {
   const getFaves = async () => {
     const res = await API.getUserFavorites();
     console.log(res);
-    setFaves(res);
+    setFaves(res.data);
   };
 
   useEffect(() => {

@@ -10,24 +10,29 @@ const config = {
 export default {
   // Save recipe to my favorites
   saveFavorites: function(data) {
-    return axios.post("/api/favorites/myfavorites", JSON.stringify(data), config);
+    axios.defaults.headers.common['x-auth-token'] = localStorage.getItem('token');
+    return axios.post("/api/favorites/myfavorites", data);
   },
   // Delete recipe from myfavorites by recipe id
   deleteFavorites: function(id) {
-    return axios.delete("/api/favorites/myfavorites/" + id, config);
+    axios.defaults.headers.common['x-auth-token'] = localStorage.getItem('token');
+    return axios.delete("/api/favorites/myfavorites/" + id);
   },
 
   //Retrieve user's favorites
   getUserFavorites: function(){
-    return axios.get("/api/favorites/myfavorites", config)
+    axios.defaults.headers.common['x-auth-token'] = localStorage.getItem('token');
+    return axios.get("/api/favorites/myfavorites")
   },
 
   createUser: function(data){
-    return axios.get("/api/auth", JSON.stringify(data), config)
+    axios.defaults.headers.common['x-auth-token'] = localStorage.getItem('token');
+    return axios.get("/api/auth", JSON.stringify(data))
   },
 
   getUser: function(){
-    return axios.get("/api/users", config)
+    axios.defaults.headers.common['x-auth-token'] = localStorage.getItem('token');
+    return axios.get("/api/users")
   },
 
   getFavorites: function () {

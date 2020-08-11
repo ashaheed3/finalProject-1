@@ -38,17 +38,35 @@ class MyRecipeCard extends Component{
       }
 
       toggleLike = () => {
+
+        var video = "";
+
         this.setState(state => ({ saved: !state.saved }))
         switch (this.state.saved){
         case false:
-          API.saveFavorites({
-            id: this.props.id,
-            title: this.props.title,
-            sourceUrl: this.props.href,
-            videoID: this.state.youtubeVideo ? this.state.youtubeVideo.id.videoId : "novid",
-            image: this.state.thumbnail,
-            ingredients: this.state.ingredientResults
-          })
+
+          if (Object.keys(this.state.youtubeVideo).length) {
+            video = this.state.youtubeVideo.id.videoId;
+          }
+          const data = {
+            "id": this.props.id,
+            "title": this.props.title,
+            "sourceUrl": this.props.href,
+            "videoID": video,
+            "image": this.state.thumbnail,
+            // "ingredients": this.state.ingredientResults
+          }
+
+          const id = this.props.id;
+          const title = this.props.title
+          const sourceUrl = this.props.href
+          const videoID = video
+          const image = this.state.thumbnail
+          const ingredients = this.state.ingredientResults
+          console.log({
+            id,title,sourceUrl,videoID,image,ingredients
+          });
+          API.saveFavorites({id,title,sourceUrl,videoID,image,ingredients})
         
           break;
         case true:

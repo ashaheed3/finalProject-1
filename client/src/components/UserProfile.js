@@ -17,7 +17,7 @@ function UserProfile() {
   const getUserInfo = async () => {
     const res = await API.getUser();
     console.log(res);
-    setUserInfo(res);
+    setUserInfo(res.data);
   };
 
   useEffect(() => {
