@@ -53,7 +53,7 @@ class MyRecipeCard extends Component{
             "title": this.props.title,
             "sourceUrl": this.props.href,
             "videoID": video,
-            "image": this.state.thumbnail,
+            "image": this.props.thumbnail,
             // "ingredients": this.state.ingredientResults
           }
 
@@ -61,7 +61,7 @@ class MyRecipeCard extends Component{
           const title = this.props.title
           const sourceUrl = this.props.href
           const videoID = video
-          const image = this.state.thumbnail
+          const image = "https://spoonacular.com/recipeImages/"+this.props.thumbnail
           const ingredients = this.state.ingredientResults
           console.log({
             id,title,sourceUrl,videoID,image,ingredients
