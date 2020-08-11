@@ -22,10 +22,10 @@ router.get('/api/favorites', (req, res) => {
     });
 });
 
-//how to search for one user?
-router.get('/api/user', (req, res) => {
+//how to search for one user?? this is just a test without auth token
+router.get('/api/user/test', (req, res) => {
   user
-    .findOne({ name: { $regex: new RegExp(req.query.q, 'i') } })
+    .findOne({ firstName: 'Ayanna' })
     .then((dbuser) => {
       res.json(dbuser);
     })

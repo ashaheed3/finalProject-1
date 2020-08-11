@@ -1,7 +1,6 @@
+// import header.js to use as coverpage
 
-// import header.js to use as coverpage 
-
-import React, {Fragment, useEffect} from 'react';
+/*import React, {Fragment, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Recipes from './pages/Recipes.js';
 // import Alert from './components/Alert';
@@ -33,29 +32,31 @@ const App = () =>{
   );
   }
 
+export default App;*/
+
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import ProfilePage from './pages/ProfilePage';
+import Header from './components/Header';
+import './components/styleSheet.css';
+import Recipes from './pages/Recipes';
+
+function App() {
+  return (
+    <Router>
+      <Fragment>
+        <div className='profilebody'>
+          <Header />
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={ProfilePage} />
+            <Route exact path='/recipes' component={Recipes} />
+          </Switch>
+        </div>
+      </Fragment>
+    </Router>
+  );
+}
+
 export default App;
-
-// import React, { Fragment } from 'react';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Navbar from './components/Navbar';
-// import ProfilePage from './pages/ProfilePage';
-// import Header from './components/Header';
-// import './components/styleSheet.css';
-
-// function App() {
-//   return (
-//     <Router>
-//       <Fragment>
-//         <div className='profilebody'>
-//           <Header />
-//           <Navbar />
-//           <Switch>
-//             <Route exact path='/' component={ProfilePage} />
-//           </Switch>
-//         </div>
-//       </Fragment>
-//     </Router>
-//   );
-// }
-
-// export default App;

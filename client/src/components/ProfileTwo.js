@@ -1,7 +1,14 @@
 import React from 'react';
 import './styleSheet.css';
 
-const ProfileTwo = () => {
+const ProfileTwo = ({
+  firstName,
+  username,
+  emailAddress,
+  avatar,
+  date,
+  preferences,
+}) => {
   return (
     <div className='container main-secction'>
       <div className='row'>
@@ -20,11 +27,15 @@ const ProfileTwo = () => {
                     borderRadius: '80px',
                   }}
                   src='https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png'
+                  alt='avatar'
                 />
-                <h2>Hi, First Name!</h2>
-
-                <h3>Member Since:</h3>
-                <h3>Email:</h3>
+                <div>
+                  <h2>Hi, {firstName}!</h2>
+                  <h3>username: {username}</h3>
+                  <h3>Member Since: {date}</h3>
+                  <h3>Email:{emailAddress}</h3>
+                  <h3>Preferences: {preferences}</h3>
+                </div>
               </div>
             </div>
             <div

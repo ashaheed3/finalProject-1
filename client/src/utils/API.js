@@ -1,25 +1,29 @@
-import axios from "axios";
+import axios from 'axios';
 
 const config = {
   headers: {
-      'Content-Type': 'application/json',
-      'x-auth-token': localStorage.getItem('token')
-  }
-}
+    'Content-Type': 'application/json',
+    'x-auth-token': localStorage.getItem('token'),
+  },
+};
 
 export default {
   // Save recipe to my favorites
-  saveFavorites: function(data) {
-    return axios.post("/api/favorites/myfavorites", data, config);
+  saveFavorites: function (data) {
+    return axios.post(
+      '/api/favorites/myfavorites',
+      JSON.stringify(data),
+      config
+    );
   },
   // Delete recipe from myfavorites by recipe id
-  deleteFavorites: function(id) {
-    return axios.delete("/api/favorites/myfavorites/" + id, config);
+  deleteFavorites: function (id) {
+    return axios.delete('/api/favorites/myfavorites/' + id, config);
   },
 
   //Retrieve user's favorites
-  getUserFavorites: function(){
-    return axios.get("/api/favories/myfavorites", config)
+  getUserFavorites: function () {
+    return axios.get('/api/favorites/myfavorites', config);
   },
 
   getFavorites: function () {
@@ -34,9 +38,9 @@ export default {
       });
   },
 
-  getUser: function (query) {
+  getUsers: function () {
     return axios
-      .get('/api/user', { params: { q: query } })
+      .get('/api/users')
       .then((response) => {
         console.log(response.data);
         return response.data;
@@ -45,5 +49,4 @@ export default {
         console.log(error);
       });
   },
-  
 };
