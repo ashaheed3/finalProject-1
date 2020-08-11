@@ -10,6 +10,12 @@ import {loadUser} from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 import '../src/pages/app.css'
 import Cover from '../src/pages/Cover'
+import ProfilePage from './pages/ProfilePage';
+import './components/styleSheet.css';
+import './components/Navbar'
+import Preferences from './pages/Preferences';
+import Navbar from "./components/Navbar"
+import Routes from "./components/Routing"
 
 if (localStorage.token){
   setAuthToken(localStorage.token);
@@ -25,9 +31,20 @@ const App = () =>{
   return(
     
     <Provider store={store}>
-      <div className="App">
-        <Cover/>
-      </div>
+      <Router>
+      
+        
+      <Fragment> 
+      <Navbar />
+          <Switch>
+            <Route exact path="/" component={Cover} />
+            <Route component={Routes} />
+          </Switch>
+        </Fragment>
+      
+      
+      </Router>
+
     </Provider>
   );
   }

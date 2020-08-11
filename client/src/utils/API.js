@@ -26,6 +26,10 @@ export default {
     return axios.get("/api/auth", JSON.stringify(data), config)
   },
 
+  getUser: function(){
+    return axios.get("/api/users", config)
+  },
+
   getFavorites: function () {
     return axios
       .get('/api/favorites')
@@ -38,9 +42,9 @@ export default {
       });
   },
 
-  getUser: function (query) {
+  getUsers: function () {
     return axios
-      .get('/api/user', { params: { q: query } })
+      .get('/api/users')
       .then((response) => {
         console.log(response.data);
         return response.data;

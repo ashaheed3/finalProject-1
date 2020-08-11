@@ -18,7 +18,7 @@ function Login({ login, isAuthenticated}) {
   const handleShow = () => setShow(true);
   
   if (isAuthenticated) {
-    return <Redirect to="/myprofile" />;
+    return <Redirect to="/profilepage" />;
   }
 
     return (

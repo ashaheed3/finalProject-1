@@ -59,7 +59,7 @@ function SignUp({ register, isAuthenticated }) {
     };
 
     if (isAuthenticated) {
-      return <Redirect to="/myprofile" />;
+      return <Redirect to="/profilepage" />;
     }
 
   return (
