@@ -12,7 +12,7 @@ function UserProfile() {
     emailAddress: '',
     avatar: '',
     date: null,
-    preferences: [],
+    preferences: '',
   });
 
   const getUserInfo = async () => {
@@ -38,7 +38,7 @@ function UserProfile() {
         lastName={UserInfo.lastName}
         username={UserInfo.username}
         emailAddress={UserInfo.emailAddress}
-        avatar={UserInfo.avatar} //what if no avi?
+        avatar={UserInfo.avatar}
         date={moment(UserInfo.date).format('LL')}
         preferences={UserInfo.preferences}
       />

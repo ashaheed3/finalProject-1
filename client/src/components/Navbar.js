@@ -23,9 +23,7 @@ const Navbar = () => {
           <Link to='/profilepage' className='nav-item nav-link'>
             <li>My Profile</li>
           </Link>
-          <Link to='/mykitchen' className='nav-item nav-link'>
-            <li>My Kitchen</li>
-          </Link>
+
           <Link to='/preferences' className='nav-item nav-link'>
             <li>Preferences</li>
           </Link>

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
   firstName: {
@@ -27,7 +27,7 @@ const UserSchema = new Schema({
     type: String,
   },
   preferences: {
-    type: [String],
+    type: String,
   },
   date: {
     type: Date,
