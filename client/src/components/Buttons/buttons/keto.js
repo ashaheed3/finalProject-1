@@ -14,7 +14,7 @@ export default class KetoButton extends React.Component {
         this.getKeto = this.getKeto.bind(this);
     }
     getKeto = async () => {
-
+        delete axios.defaults.headers.common["x-auth-token"];
         const response = await axios.get("https://api.spoonacular.com/recipes/search?q=chicken&diet=keto&number=9&apiKey=496787d7b33d43a48e3924e2e30430f9", {})
             .then((response) => {
                 this.props.setRecipes(response.data.results)

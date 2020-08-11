@@ -17,7 +17,7 @@ export default class PescetarianButton extends React.Component{
          this.getPescetarian= this.getPescetarian.bind(this);
     }
     getPescetarian = async () => {
-
+        delete axios.defaults.headers.common["x-auth-token"];
         const response = await axios.get("https://api.spoonacular.com/recipes/search?q=chicken&diet=Pescetarian&number=9&apiKey=496787d7b33d43a48e3924e2e30430f9", {})
         .then((response) => {
             this.props.setRecipes(response.data.results)

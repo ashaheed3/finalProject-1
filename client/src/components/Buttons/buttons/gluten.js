@@ -6,6 +6,11 @@ import API from '../../../sharedComponets/sharedAPI'
 
 
 
+const styleMe ={
+    backgroundColor: "#844685",
+    fontSize: "24px",
+    color: 'white',
+}
 
 export default class GlutenButton extends React.Component {
 
@@ -19,7 +24,7 @@ export default class GlutenButton extends React.Component {
     }
 
     getGluten = async () => {
-
+        delete axios.defaults.headers.common["x-auth-token"];
         const response = await axios.get("https://api.spoonacular.com/recipes/search?q=chicken&diet=keto&number=9&apiKey=496787d7b33d43a48e3924e2e30430f9", {})
             .then((response) => {
                 console.log(response.data.results)
@@ -38,7 +43,7 @@ export default class GlutenButton extends React.Component {
                 href="Card"
                 onClick={this.Card}>
 
-                <Button onClick={this.getGluten} variant="primary" size="lg" active>
+                <Button onClick={this.getGluten} variant="primary" size="lg" active style={styleMe}> 
                     Gluten
   </Button>{' '}
             </div>

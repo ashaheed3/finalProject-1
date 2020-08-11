@@ -14,7 +14,14 @@ const RecipeCard = ({ image, title, ingredients, sourceUrl, videoID }) => {
         </div>
 
         <div className='description' style={{ color: 'white' }}>
-          Ingredients: {ingredients.toString()}
+          Ingredients:
+          {ingredients.map((ingredient) => {
+            return (
+              <ul style={{ listStyleType: 'none', padding: '0', margin: '0' }}>
+                <li>{ingredient.name}</li>
+              </ul>
+            );
+          })}
         </div>
       </div>
       <div className='extra content'>

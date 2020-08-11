@@ -6,7 +6,7 @@ function Favorites() {
   const [faves, setFaves] = useState([]);
 
   const getFaves = async () => {
-    const res = await API.getFavorites();
+    const res = await API.getUserFavorites();
     console.log(res);
     setFaves(res);
   };
@@ -20,12 +20,11 @@ function Favorites() {
       return <h1 className='text-center'>You haven't saved any recipes</h1>;
     }
 
-    let ingredientsArray = [];
+    /*let ingredientsArray = [];
     let ingredients = faves[0].ingredients;
-
     ingredients.forEach((ingredient) => {
       ingredientsArray.push(ingredient.name);
-    });
+    });*/
 
     return faves.map((fave) => (
       <RecipeCard
@@ -33,7 +32,7 @@ function Favorites() {
         title={fave.title}
         sourceUrl={fave.sourceUrl}
         videoID={fave.videoID}
-        ingredients={ingredientsArray}
+        ingredients={fave.ingredients}
         image={fave.image}
       />
     ));
@@ -47,7 +46,9 @@ function Favorites() {
         marginTop: '20px',
       }}
     >
-      <h2 style={{ textAlign: 'center' }}>My Favorite Recipes</h2>
+      <h2 style={{ textAlign: 'center', color: '#844685' }}>
+        My Favorite Recipes
+      </h2>
       <div class='ui link cards'>{renderedFaves(faves)}</div>
     </div>
   );

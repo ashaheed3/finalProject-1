@@ -19,7 +19,7 @@ export default class Whole30Button extends React.Component{
 
 
     getWhole30 = async () => {
-
+        delete axios.defaults.headers.common["x-auth-token"];
         const response = await axios.get("https://api.spoonacular.com/recipes/search?q=chicken&diet=whole-30&number=9&apiKey=496787d7b33d43a48e3924e2e30430f9", {})
         .then((response) => {
             this.props.setRecipes(response.data.results)

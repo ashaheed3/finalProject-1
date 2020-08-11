@@ -3,8 +3,20 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 // import Card from '../../Card/recipeCard';
 // import API from '../../../sharedComponets/sharedAPI'
+import "../../../pages/app.css"
 
+const styleMe ={
+    
+        color: "#f3c623",
+        backgroundColor: "#844685",
+        borderColor:"#faf4ff",
+        width : "250px",
+        marginBottom: "20px",
+        borderRadius: "50px",
+        borderWidth: "5px",
+        fontWeight: "bold"
 
+}
 
 
 export default class GlutenButton extends React.Component {
@@ -38,7 +50,7 @@ export default class GlutenButton extends React.Component {
                 href="Card"
                 onClick={this.Card}>
 
-                <Button onClick={this.getGluten} variant="primary" size="lg" active>
+                <Button onClick={this.getGluten} variant="primary" size="lg" active style={styleMe}>
                     Gluten
   </Button>{' '}
             </div>

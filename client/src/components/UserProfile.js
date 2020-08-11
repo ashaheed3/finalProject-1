@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import APItest from '../utils/APItest';
+import API from '../utils/API';
 import ProfileTwo from './ProfileTwo';
 
 function UserProfile() {
@@ -15,7 +15,7 @@ function UserProfile() {
   });
 
   const getUserInfo = async () => {
-    const res = await APItest.getUsers();
+    const res = await API.getUser();
     console.log(res);
     setUserInfo(res);
   };
