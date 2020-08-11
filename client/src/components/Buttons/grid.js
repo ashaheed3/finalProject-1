@@ -13,25 +13,18 @@ import PescetarianButton from './buttons/pescetarian';
 import PaleoButton from './buttons/paleo';
 import RecipeCard from '../Card/Recipe';
 
-
-
-
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
-
-
 export default class TheGrid extends React.Component {
   state = {
-    recipes: null
-  }
+    recipes: null,
+  };
 
   setRecipes = (recipes) => {
-    this.setState({ recipes })
-  }
+    this.setState({ recipes });
+  };
 
   render() {
     const { recipes } = this.state;
@@ -40,32 +33,53 @@ export default class TheGrid extends React.Component {
       <div>
         <Container>
           <Row>
-            <Col xs><GlutenButton value='gluten' setRecipes={this.setRecipes} /></Col>
+            <Col xs>
+              <GlutenButton value='gluten' setRecipes={this.setRecipes} />
+            </Col>
 
-            <Col xs={{ order: 12 }}><KetoButton setRecipes={this.setRecipes} value='Keto' /></Col>
-            <Col xs={{ order: 1 }}><LactoButton setRecipes={this.setRecipes} /></Col>
+            <Col xs={{ order: 12 }}>
+              <KetoButton setRecipes={this.setRecipes} value='Keto' />
+            </Col>
+            <Col xs={{ order: 1 }}>
+              <LactoButton setRecipes={this.setRecipes} />
+            </Col>
           </Row>
           <Row>
-            <Col xs><OvoButton value='ovo' setRecipes={this.setRecipes} /></Col>
-            <Col xs={{ order: 12 }}><PaleoButton setRecipes={this.setRecipes}/></Col>
-            <Col xs={{ order: 1 }}><PescetarianButton setRecipes={this.setRecipes} /></Col>
+            <Col xs>
+              <OvoButton value='ovo' setRecipes={this.setRecipes} />
+            </Col>
+            <Col xs={{ order: 12 }}>
+              <PaleoButton setRecipes={this.setRecipes} />
+            </Col>
+            <Col xs={{ order: 1 }}>
+              <PescetarianButton setRecipes={this.setRecipes} />
+            </Col>
           </Row>
           <Row>
-            <Col xs><PrimalButton /></Col>
-            <Col xs={{ order: 12 }}><VeganButton setRecipes={this.setRecipes} /></Col>
-            <Col xs={{ order: 1 }}><VegetarianButton setRecipes={this.setRecipes} /></Col>
-            <Col xs={{ order: 1 }}><Whole30Button  setRecipes={this.setRecipes} /></Col>
+            <Col xs>
+              <PrimalButton />
+            </Col>
+            <Col xs={{ order: 12 }}>
+              <VeganButton setRecipes={this.setRecipes} />
+            </Col>
+            <Col xs={{ order: 1 }}>
+              <VegetarianButton setRecipes={this.setRecipes} />
+            </Col>
+            <Col xs={{ order: 1 }}>
+              <Whole30Button setRecipes={this.setRecipes} />
+            </Col>
           </Row>
         </Container>
         <Container>
-          {recipes && recipes.map((recipe) => (
-            <RecipeCard
-              id={recipe.id}
-              key={recipe.id}
-              title={recipe.title}
-              url={recipe.sourceUrl}
-            />
-          ))}
+          {recipes &&
+            recipes.map((recipe) => (
+              <RecipeCard
+                id={recipe.id}
+                key={recipe.id}
+                title={recipe.title}
+                url={recipe.sourceUrl}
+              />
+            ))}
         </Container>
       </div>
     );

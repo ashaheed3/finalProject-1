@@ -1,3 +1,15 @@
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.recipe-container > div {
+  width: 33%;
+  margin-bottom: 20px;
+}
+.recipe-container .card {
+  margin: 0 auto;
+}
+
 h1 {
   font-family: 'Montez', cursive;
   font-size: 100px;
