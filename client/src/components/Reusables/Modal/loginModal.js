@@ -16,6 +16,37 @@ function Login({ login, isAuthenticated}) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const initialFormData = Object.freeze({
+    username: '',
+    password: ''
+  });
+
+  const [formData, updateFormData] = React.useState(initialFormData);
+
+  const handleChange = (e) => {
+    updateFormData({
+      ...formData,
+
+      // Trimming any whitespace
+      [e.target.name]: e.target.value.trim(),
+    });
+  };
+
+  const {
+    username,
+    password
+  } = formData;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    login(
+      username,
+      password
+    ).then((res) => console.log(res));
+  };
+
   
   if (isAuthenticated) {
     return <Redirect to="/profilepage" />;
@@ -45,7 +76,9 @@ function Login({ login, isAuthenticated}) {
                                                   Username
                                                   </Form.Label>
                                                   <Col sm={10}>
-                                                  <Form.Control type="email" placeholder="Email" />
+                                                  <Form.Control
+                                                   
+                    name="username" onChange={handleChange} type="text" placeholder="Username" />
                                                   </Col>
                                               </Form.Group>
   
@@ -54,7 +87,7 @@ function Login({ login, isAuthenticated}) {
                                                   Password
                                                   </Form.Label>
                                                   <Col sm={10}>
-                                                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control name='password' onChange={handleChange} type="password" placeholder="Password" />
                                                   </Col>
                                               </Form.Group>
                                               </Form>
@@ -64,7 +97,7 @@ function Login({ login, isAuthenticated}) {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button id='btnModal' variant="primary">Sign Up</Button>
+            <Button id='btnModal' onClick={handleSubmit} variant="primary">Log in</Button>
           </Modal.Footer>
         </Modal>
        
