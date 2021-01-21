@@ -22,7 +22,7 @@ Go to Recipes to search for recipes. This page can be viewed as a guest
 
 Saved recipes can be viewed from My Profile. Only users that are logged in can view this page
 
-![My Profile](./client/public/images/myprofile.PNG)
+![My Profile](./client/public/images/myProfile.PNG)
 
 User can also discover new recipes according to a dietary prefernce
 
