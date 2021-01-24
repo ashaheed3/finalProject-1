@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../actions/auth'
 
-const Navbar = () => {
+const Navbar = ({ auth: {isAuthenticated, loading}, logout}) => {
   return (
     <nav className='navbar navbar-expand-lg navbar-light'>
       <button
@@ -31,10 +34,24 @@ const Navbar = () => {
           <Link to='/recipes' className='nav-item nav-link'>
             <li>Recipes</li>
           </Link>
+          <Link to='/' className='nav-item nav-link'>
+            <li>
+              <a onClick={logout} href='#!'>Logout</a>
+            </li>
+          </Link>
         </ul>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+Navbar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps, { logout })(Navbar);

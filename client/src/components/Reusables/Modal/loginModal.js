@@ -40,10 +40,9 @@ function Login({ login, isAuthenticated}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     login(
-      username,
-      password
+      formData
     ).then((res) => console.log(res));
   };
 

@@ -68,6 +68,8 @@ function SignUp({ register, isAuthenticated }) {
 
   return (
     <div>
+      <Button variant='primary' onClick={handleShow}>
+        Sign Up
       </Button>
 
       <Modal
