@@ -27,9 +27,9 @@ const Navbar = ({ auth: {isAuthenticated, loading}, logout}) => {
             <li>My Profile</li>
           </Link>
 
-          <Link to='/preferences' className='nav-item nav-link'>
+          {/* <Link to='/preferences' className='nav-item nav-link'>
             <li>Preferences</li>
-          </Link>
+          </Link> */}
 
           <Link to='/recipes' className='nav-item nav-link'>
             <li>Recipes</li>
